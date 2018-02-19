@@ -11,16 +11,16 @@ struct complex_t
 complex_t add(complex_t other) const 
 {
 	complex_t result;
-  result.real=real+other.real;
-  result.imag=imag+other.imag;
-  return result;
+	result.real=real+other.real;
+	result.imag=imag+other.imag;
+	return result;
 }
 
 complex_t sub(complex_t other) const
 {
 	complex_t result;
 	result.real=real-other.real;
-  result.imag=imag-other.imag;
+	result.imag=imag-other.imag;
 	return result;
 }
 
