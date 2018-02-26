@@ -45,7 +45,7 @@ struct complex_t
 		return  stream >> op >> real>> op >> imag >> op;
 	}
 
-	ostream & write(ostream & stream) 
+	ostream & write(ostream & stream) const
 	{
 		return stream  << "(" << real << ", " << imag << ")";
 	}
