@@ -39,23 +39,15 @@ struct complex_t
 		return result;
 	}
 
-	istream & read(istream & stream) 
+	istream & read(istream & stream)
 	{
-		char a, b, c;
-		float real, imag;
-		if (stream >> a && a == '(' && stream >> real && stream >> b && b == ',' && stream >> imag && stream >> c && c == ')') 
-		{
-			this->real = real;
-			this->imag = imag;
-		}
-		else 
-			stream.setstate(ios::failbit);
-		return stream;
+		char op;
+		return  stream >> op >> real>> op >> imag >> op;
 	}
-	ostream & write(ostream & stream)
+
+	ostream & write(ostream & stream) const
 	{
-		stream << "(" << real << "," << imag << ")";
-		return stream;
+		return stream  << "(" << real << ", " << imag << ")";
 	}
 	float real;
 	float imag;
