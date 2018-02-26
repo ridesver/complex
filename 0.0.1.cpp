@@ -39,13 +39,13 @@ struct complex_t
 		return result;
 	}
 
-	istream & read(istream & stream)
+	istream & read(istream & stream) const
 	{
 		char op;
 		return  stream >> op >> real>> op >> imag >> op;
 	}
 
-	ostream & write(ostream & stream)
+	ostream & write(ostream & stream) const
 	{
 		return stream  << "(" << real << ", " << imag << ")";
 	}
